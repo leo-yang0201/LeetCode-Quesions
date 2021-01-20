@@ -28,8 +28,8 @@
   public class ConstructBinaryTreeFromPreorderAndInorderTraversal{
       public static void main(String[] args) {
            Solution solution = new ConstructBinaryTreeFromPreorderAndInorderTraversal().new Solution();
-           int preorder[] = new int[]{1,2,3,4,5,6,7};
-           int inorder[] = new int[]{4,2,5,1,6,3,7};
+           int preorder[] = new int[]{3,9,20,15,7};
+           int inorder[] = new int[]{9,3,15,20,7};
            solution.buildTree(preorder,inorder);
       }
       //leetcode submit region begin(Prohibit modification and deletion)
@@ -56,6 +56,7 @@ class Solution {
                 root.right = buildTree(pre_right, in_right);
                 break;
             }
+            
         }
         return root;
     }
